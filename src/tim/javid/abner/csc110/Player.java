@@ -4,4 +4,6 @@ public class Player {
 	
 	public double balance;
 	
+	public String name;
+	
 }
