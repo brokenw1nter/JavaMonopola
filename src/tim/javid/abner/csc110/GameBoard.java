@@ -7,7 +7,10 @@ import interfaces.ConsoleUI;
 public class GameBoard {
 	
 	public Player[] players;
-	
+	/**
+	 * Prompts the players for total # of players and asks for name - calls the play()
+	 * @throws IOException
+	 */
 	public void init() throws IOException	{
 		System.out.println("Welcome to Monopoly!");
 		int numberOfPlayers = ConsoleUI.promptForInt("How many players will there be? This game can only have 2 - 8 players", 2, 8);
@@ -21,7 +24,10 @@ public class GameBoard {
 		play();
 		
 	}
-	
+	/**
+	 * prompts the menu with two options - boolean because of main method loop
+	 * @return false - if true, does not prompt menu again and ends game
+	 */
 	public boolean play()	{		
 		int COUNT_OPTONS = 2;
 		boolean gameOver = false;
