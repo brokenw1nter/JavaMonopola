@@ -12,4 +12,5 @@ public class Monopoly {
 			appRunning = game.play();
 		}
 	}
+	
 }
