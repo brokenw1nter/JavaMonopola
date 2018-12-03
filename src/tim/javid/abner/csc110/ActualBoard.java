@@ -2,8 +2,16 @@ package tim.javid.abner.csc110;
 
 public class ActualBoard {
 	
-	public BoardSpace[] spaces = new BoardSpace[40];
+	/**
+	 * initialize new array
+	 */
+	public BoardSpace[] spaces = new BoardSpace[41];
 	
+	/**
+	 * assigns indexes to property on the board
+	 * @param spaces (array name)
+	 * @return spaces (the array)
+	 */
 	public String[] placeLandOn(String[] spaces)	{
 		spaces[0] = "Go";
 		spaces[1] = "Mediter-Ranean Avenue";
