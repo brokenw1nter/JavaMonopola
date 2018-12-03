@@ -5,38 +5,71 @@ import interfaces.ConsoleUI;
 
 public class GameBoard {
 	
+	public int turn;
 	public Player[] players;
+	public boolean gameOver = false;
 	
 	/**
-	 * Prompts the players for total # of players and asks for name - calls the play()
+	 * Prompts the players for total # of player, their name, and token - calls the play() method
 	 * @throws IOException
 	 */
-	public void init() throws IOException	{
+	public void init() throws IOException {
 		System.out.println("Welcome to JavaMonopola!");
-		int numberOfPlayers = ConsoleUI.promptForInt("How many players will there be? This game can only have 2 - 8 players", 2, 8);
+		int numberOfPlayers = ConsoleUI.promptForInt("Enter Amount of Players between 2 and 8:", 2, 8);
 		players = new Player[numberOfPlayers];
+		
 		for (int i = 0; i < players.length; i++) {
-			String playerName = ConsoleUI.promptForInput("Please enter player " + (i + 1) + "'s name.", false);
+			String playerName = ConsoleUI.promptForInput("Enter Player " + (i + 1) + "'s Name:", false);
+			System.out.println("Tokens: Top Hat, Battleship, Racecar, Scottie Dog, T-Rex, Rubber Ducky, Penguin");
+			String playerToken = ConsoleUI.promptForInput("Choose a Token for Player " + (i + 1) + ":", false);
 			Player player = new Player();
 			player.name = playerName;
 			players[i] = player;
+			this.turn = 0;
 		}
-		play();
 		
+		play();
 	}
 	
 	/**
 	 * prompts the menu with two options - boolean because of main method loop
 	 * @return false - if true, does not prompt menu again and ends game
 	 */
-	public boolean play()	{		
-		int COUNT_OPTONS = 2;
-		boolean gameOver = false;
-		while(!gameOver)	{
-			String[] options = new String[COUNT_OPTONS];
-			populateString(options);
+	public boolean play() {
+		final int COUNT_OPTONS = 2;
+		String[] options = new String[COUNT_OPTONS];
+		populateString(options);
+		
+		while(!gameOver) {
+			System.out.println("It is " + players[turn].name + "'s turn.");
+			System.out.println(players[turn].name + ", your balance is " + players[turn].balance);
+			int selection = ConsoleUI.promptForMenuSelection(options, false);
+			
+			switch (selection) {
+			case 0:
+				rollTheDice();
+				switchTurn();
+				break;
+			case 1:
+				switchTurn();
+				System.out.println(players[turn].name + " Won!");
+                System.out.println("Thank You for Playing!");
+                gameOver = true;
+                break;
+            default:
+            	throw new IllegalArgumentException("Error, Your Selection '" + selection + "' is Invalid.");
+			}
 		}
+		
 		return false;
+	}
+	
+	private void rollTheDice() {
+		
+	}
+	
+	private void switchTurn() {
+		turn = (turn>= (players.length - 1) ? 0 : turn + 1);
 	}
 	
 	private void populateString(String[] options)	{
