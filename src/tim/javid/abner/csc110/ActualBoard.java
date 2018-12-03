@@ -6,16 +6,16 @@ public class ActualBoard {
 	
 	public String[] placeLandOn(String[] spaces)	{
 		spaces[0] = "Go";
-		spaces[1] = "Brown";
+		spaces[1] = "Mediter-Ranean Avenue";
 		spaces[2] = "Community Chest";
-		spaces[3] = "Brown";
+		spaces[3] = "Baltic Avenue";
 		spaces[4] = "Income Tax";
 		spaces[5] = "Reading Railroad";
 		spaces[6] = "Oriental Avenue";
 		spaces[7] = "Chance";
 		spaces[8] = "Vermont Avenue";
 		spaces[9] = "Connecticut Avenue";
-		spaces[10] = "Jail";
+		spaces[10] = "Just visiting";
 		spaces[11] = "St. Charles Place";
 		spaces[12] = "Electric Company";
 		spaces[13] = "States Avenue";
@@ -45,8 +45,8 @@ public class ActualBoard {
 		spaces[37] = "Park Place";
 		spaces[38] = "Luxury Tax";
 		spaces[39] = "Boardwalk";
-		
+		spaces[40] = "Actual Jail";
 		return spaces;
-		}
+	}
 	
 }
