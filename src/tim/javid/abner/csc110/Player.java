@@ -6,4 +6,5 @@ public class Player {
 	
 	public String name;
 	
+	public BoardSpace[] copyOfSpaces = ActualBoard.spaces[];
 }

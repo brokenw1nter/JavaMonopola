@@ -2,12 +2,21 @@ package tim.javid.abner.csc110;
 
 public class ChanceCard {
 	
+	public Player player = new Player();
+	
+	public ActualBoard AB = new ActualBoard();
+	
 	/**
 	 * Move forward until you land on Go
 	 * Collect $200 from the bank
 	 */
 	public void advanceToGo() {
-		
+		boolean boolCheck = true;
+		if(boolCheck)
+		{
+			player.balance += 200;
+			
+		}
 	}
 	
 	/**
