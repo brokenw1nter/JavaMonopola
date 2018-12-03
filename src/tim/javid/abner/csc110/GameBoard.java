@@ -1,7 +1,6 @@
 package tim.javid.abner.csc110;
 
 import java.io.IOException;
-
 import interfaces.ConsoleUI;
 
 public class GameBoard {
