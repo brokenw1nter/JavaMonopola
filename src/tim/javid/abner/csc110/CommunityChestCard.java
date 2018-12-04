@@ -2,18 +2,15 @@ package tim.javid.abner.csc110;
 
 public class CommunityChestCard {
 	
-	public BoardSpace[] copyOfSpaces = new ActualBoard().spaces;
-	
-	private BoardSpace boardSpace = new BoardSpace();
+//	private BoardSpace boardSpace = new BoardSpace();
 	private Player player = new Player();
-	private Player playerspace = new Player();
 	
 	/**
 	 * Move forward until you land on Go
 	 * Collect $200 from the bank
 	 */
 	public void advanceToGo() {
-		Player.playerSpace = copyOfSpaces[0]; 
+		player.playerSpace = player.copyOfSpaces[0]; 
 		
 	}
 	
@@ -52,7 +49,7 @@ public class CommunityChestCard {
 	 */
 	public void goToJail() {
 
-		playerSpace = copyOfSpaces[41]; 
+		player.playerSpace = player.copyOfSpaces[41]; 
 		
 	}
 	

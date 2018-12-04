@@ -2,6 +2,7 @@ package tim.javid.abner.csc110;
 
 public class BoardSpace {
 	
+	public Player owner;
 	public double amount;
 	
 	/**
