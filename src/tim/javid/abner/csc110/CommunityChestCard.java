@@ -2,6 +2,11 @@ package tim.javid.abner.csc110;
 
 public class CommunityChestCard {
 	
+	private void showOutput()
+	{
+		System.out.println("Your balance is now " + player.balance);
+	}
+	
 //	private BoardSpace boardSpace = new BoardSpace();
 	private Player player = new Player();
 	
