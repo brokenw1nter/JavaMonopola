@@ -58,9 +58,7 @@ public class GameBoard {
 				switchTurn();
 				break;
 			case 1:
-				switchTurn();
-				System.out.println(players[turn].name + " Won!");
-                System.out.println("Thank You for Playing!");
+                System.out.println("Thank You for Playing JavaMonopola!");
                 gameOver = true;
                 break;
             default:
