@@ -4,14 +4,16 @@ public class CommunityChestCard {
 	
 	public BoardSpace[] copyOfSpaces = new ActualBoard().spaces;
 	
-	private BoardSpace playerSpace;
+	private BoardSpace boardSpace = new BoardSpace();
+	private Player player = new Player();
+	private Player playerspace = new Player();
 	
 	/**
 	 * Move forward until you land on Go
 	 * Collect $200 from the bank
 	 */
 	public void advanceToGo() {
-		playerSpace = copyOfSpaces[0]; 
+		Player.playerSpace = copyOfSpaces[0]; 
 		
 	}
 	
@@ -72,7 +74,7 @@ public class CommunityChestCard {
 	 * Collect $20 from the bank
 	 */
 	public void incomeTaxRefund() {
-		Player.balance += 20;
+		player.balance += 20;
 		
 	}
 	
@@ -130,7 +132,7 @@ public class CommunityChestCard {
 	 * Collect $100 from the bank
 	 */
 	public void inheritMoney() {
-		Player.balance += +100;
+		player.balance += 100;
 		
 	}
 	

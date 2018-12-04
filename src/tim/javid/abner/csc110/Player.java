@@ -6,5 +6,6 @@ public class Player {
 	public double balance;
 	public Piece.Token token;
 	public BoardSpace[] copyOfSpaces = new ActualBoard().spaces;
+	public Integer playerSpace;
 	
 }
