@@ -1,6 +1,8 @@
 package tim.javid.abner.csc110;
 
 import java.io.IOException;
+import java.util.Random;
+
 import interfaces.ConsoleUI;
 
 public class GameBoard {
@@ -8,6 +10,11 @@ public class GameBoard {
 	public int turn;
 	public Player[] players;
 	public boolean gameOver = false;
+	public BoardSpace boardSpace;
+	public Player player;
+
+	Die die1 = new Die();
+	Die die2 = new Die();
 	
 	/**
 	 * Prompts the players for total # of player, their name, and token - calls the play() method
@@ -65,6 +72,26 @@ public class GameBoard {
 	}
 	
 	private void rollTheDice() {
+		Random rand = new Random();
+		int dice = rand.nextInt(6) + 1;
+		int dice2 = rand.nextInt(6) + 1;
+		System.out.println(dice + dice2);
+		if(dice == dice2)	{
+			System.out.println("Doubles! Roll again.");
+			rollTheDice();
+				if(dice == dice2)	{
+					System.out.println("Another Double! Roll again!");
+					rollTheDice();
+					if(dice == dice2)	{
+						System.out.println("Oof, another double. Go to jail...");
+						boardSpace.goToJail();
+					}
+				}
+		}
+		else	{
+			gameOver = false;
+		}
+		
 		
 	}
 	

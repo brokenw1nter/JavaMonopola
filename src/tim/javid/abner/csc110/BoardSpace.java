@@ -5,6 +5,7 @@ public class BoardSpace {
 	public Player owner;
 	public double amount;
 	
+	
 	/**
 	 * Game starts here
 	 * When passed, player receives $200 from the bank
