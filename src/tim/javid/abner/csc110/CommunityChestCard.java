@@ -34,6 +34,7 @@ public class CommunityChestCard {
 	 */
 	public void doctorsFee() {
 		player.balance -= 50;
+		showOutput();
 	}
 	
 	/**
