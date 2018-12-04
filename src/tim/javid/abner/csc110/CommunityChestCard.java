@@ -10,7 +10,7 @@ public class CommunityChestCard {
 	 * Collect $200 from the bank
 	 */
 	public void advanceToGo() {
-		player.playerSpace = player.copyOfSpaces[0]; 
+		player.playerSpace = player.copyOfSpaces[0];
 		
 	}
 	
@@ -49,7 +49,7 @@ public class CommunityChestCard {
 	 */
 	public void goToJail() {
 
-		player.playerSpace = player.copyOfSpaces[41]; 
+		player.playerSpace = player.copyOfSpaces[41];
 		
 	}
 	
