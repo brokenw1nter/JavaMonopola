@@ -7,7 +7,7 @@ public class ActualBoard {
 	 */
 	public BoardSpace[] spaces = new BoardSpace[41];
 	
-	public BoardSpace playerSpace;
+	public BoardSpace playerPosition;
 	
 	/**
 	 * assigns indexes to property on the board
@@ -61,135 +61,135 @@ public class ActualBoard {
 	
 	public void playerIsOn() {
 		for (int i = 0; i < 41; i++) {
-			if (playerSpace == spaces[i]) {
+			if (playerPosition == spaces[i]) {
 				System.out.println(spaces[i]);
 			}
 		}
 		
-//		if (playerSpace == spaces[0])	{
+//		if (playerPosition == spaces[0])	{
 //			System.out.println(spaces[0]);
 //		}
-//		if (playerSpace == spaces[1])	{
+//		if (playerPosition == spaces[1])	{
 //			System.out.println(spaces[1]);
 //		}
-//		if (playerSpace == spaces[2])	{
+//		if (playerPosition == spaces[2])	{
 //			System.out.println(spaces[2]);
 //		}
-//		if (playerSpace == spaces[3])	{
+//		if (playerPosition == spaces[3])	{
 //			System.out.println(spaces[3]);
 //		}
-//		if (playerSpace == spaces[4])	{
+//		if (playerPosition == spaces[4])	{
 //			System.out.println(spaces[4]);
 //		}
-//		if (playerSpace == spaces[5])	{
+//		if (playerPosition == spaces[5])	{
 //			System.out.println(spaces[5]);
 //		}
-//		if (playerSpace == spaces[6])	{
+//		if (playerPosition == spaces[6])	{
 //			System.out.println(spaces[6]);
 //		}
-//		if (playerSpace == spaces[7])	{
+//		if (playerPosition == spaces[7])	{
 //			System.out.println(spaces[7]);
 //		}
-//		if (playerSpace == spaces[8])	{
+//		if (playerPosition == spaces[8])	{
 //			System.out.println(spaces[8]);
 //		}
-//		if (playerSpace == spaces[9])	{
+//		if (playerPosition == spaces[9])	{
 //			System.out.println(spaces[9]);
 //		}
-//		if (playerSpace == spaces[10])	{
+//		if (playerPosition == spaces[10])	{
 //			System.out.println(spaces[10]);
 //		}
-//		if (playerSpace == spaces[11])	{
+//		if (playerPosition == spaces[11])	{
 //			System.out.println(spaces[11]);
 //		}
-//		if (playerSpace == spaces[12])	{
+//		if (playerPosition == spaces[12])	{
 //			System.out.println(spaces[12]);
 //		}
-//		if (playerSpace == spaces[13])	{
+//		if (playerPosition == spaces[13])	{
 //			System.out.println(spaces[13]);
 //		}
-//		if (playerSpace == spaces[14])	{
+//		if (playerPosition == spaces[14])	{
 //			System.out.println(spaces[14]);
 //		}
-//		if (playerSpace == spaces[15])	{
+//		if (playerPosition == spaces[15])	{
 //			System.out.println(spaces[15]);
 //		}
-//		if (playerSpace == spaces[16])	{
+//		if (playerPosition == spaces[16])	{
 //			System.out.println(spaces[16]);
 //		}
-//		if (playerSpace == spaces[17])	{
+//		if (playerPosition == spaces[17])	{
 //			System.out.println(spaces[17]);
 //		}
-//		if (playerSpace == spaces[18])	{
+//		if (playerPosition == spaces[18])	{
 //			System.out.println(spaces[18]);
 //		}
-//		if (playerSpace == spaces[19])	{
+//		if (playerPosition == spaces[19])	{
 //			System.out.println(spaces[19]);
 //		}
-//		if (playerSpace == spaces[20])	{
+//		if (playerPosition == spaces[20])	{
 //			System.out.println(spaces[20]);
 //		}
-//		if (playerSpace == spaces[21])	{
+//		if (playerPosition == spaces[21])	{
 //			System.out.println(spaces[21]);
 //		}
-//		if (playerSpace == spaces[22])	{
+//		if (playerPosition == spaces[22])	{
 //			System.out.println(spaces[22]);
 //		}
-//		if (playerSpace == spaces[23])	{
+//		if (playerPosition == spaces[23])	{
 //			System.out.println(spaces[23]);
 //		}
-//		if (playerSpace == spaces[24])	{
+//		if (playerPosition == spaces[24])	{
 //			System.out.println(spaces[24]);
 //		}
-//		if (playerSpace == spaces[25])	{
+//		if (playerPosition == spaces[25])	{
 //			System.out.println(spaces[25]);
 //		}
-//		if (playerSpace == spaces[26])	{
+//		if (playerPosition == spaces[26])	{
 //			System.out.println(spaces[26]);
 //		}
-//		if (playerSpace == spaces[27])	{
+//		if (playerPosition == spaces[27])	{
 //			System.out.println(spaces[27]);
 //		}
-//		if (playerSpace == spaces[28])	{
+//		if (playerPosition == spaces[28])	{
 //			System.out.println(spaces[28]);
 //		}
-//		if (playerSpace == spaces[29])	{
+//		if (playerPosition == spaces[29])	{
 //			System.out.println(spaces[29]);
 //		}
-//		if (playerSpace == spaces[30])	{
+//		if (playerPosition == spaces[30])	{
 //			System.out.println(spaces[30]);
 //		}
-//		if (playerSpace == spaces[31])	{
+//		if (playerPosition == spaces[31])	{
 //			System.out.println(spaces[31]);
 //		}
-//		if (playerSpace == spaces[32])	{
+//		if (playerPosition == spaces[32])	{
 //			System.out.println(spaces[32]);
 //		}
-//		if (playerSpace == spaces[33])	{
+//		if (playerPosition == spaces[33])	{
 //			System.out.println(spaces[33]);
 //		}
-//		if (playerSpace == spaces[34])	{
+//		if (playerPosition == spaces[34])	{
 //			System.out.println(spaces[34]);
 //		}
-//		if (playerSpace == spaces[35])	{
+//		if (playerPosition == spaces[35])	{
 //			System.out.println(spaces[35]);
 //		}
-//		if (playerSpace == spaces[36])	{
+//		if (playerPosition == spaces[36])	{
 //			System.out.println(spaces[36]);
 //		}
-//		if (playerSpace == spaces[37])	{
+//		if (playerPosition == spaces[37])	{
 //			System.out.println(spaces[37]);
 //		}
-//		if (playerSpace == spaces[38])	{
+//		if (playerPosition == spaces[38])	{
 //			System.out.println(spaces[38]);
 //		}
-//		if (playerSpace == spaces[39])	{
+//		if (playerPosition == spaces[39])	{
 //			System.out.println(spaces[39]);
 //		}
-//		if (playerSpace == spaces[40])	{
+//		if (playerPosition == spaces[40])	{
 //			System.out.println(spaces[40]);
 //		}
-//		if (playerSpace == spaces[41])	{
+//		if (playerPosition == spaces[41])	{
 //			System.out.println(spaces[41]);
 //		}
 	}
