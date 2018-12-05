@@ -14,8 +14,8 @@ public class ActualBoard {
 	 * @param spaces (array name)
 	 * @return spaces (the array)
 	 */
-	public String[] placeLandOn(String[] spaces) {
-		spaces[0] = "Go";
+	public int[] placeLandOn(int[] spaces) {
+		spaces[0] = BoardSpace.go();
 		spaces[1] = "Mediter-Ranean Avenue";
 		spaces[2] = "Community Chest";
 		spaces[3] = "Baltic Avenue";

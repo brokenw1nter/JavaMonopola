@@ -4,6 +4,7 @@ public class CommunityChestCard {
 	
 //	private BoardSpace boardSpace = new BoardSpace();
 	private Player player = new Player();
+	public GameBoard numberOfPlayers;
 	
 	/**
 	 * Prints out the player's balance
@@ -17,7 +18,7 @@ public class CommunityChestCard {
 	 * Collect $200 from the bank
 	 */
 	public void advanceToGo() {
-		player.playerSpace = player.copyOfSpaces[0];
+		player.playerPosition = player.copyOfSpaces[0];
 		showOutput();
 	}
 	
@@ -50,7 +51,6 @@ public class CommunityChestCard {
 	 * Card may be kept until needed, traded, or sold
 	 */
 	public void getOutOfJail() {
-		showOutput();
 	}
 	
 	/**
@@ -58,8 +58,7 @@ public class CommunityChestCard {
 	 * You do not pass Go or collect $200 from the bank
 	 */
 	public void goToJail() {
-
-		player.playerSpace = player.copyOfSpaces[41];
+		player.playerPosition = player.copyOfSpaces[41];
 		showOutput();
 	}
 	
@@ -67,6 +66,24 @@ public class CommunityChestCard {
 	 * Collect $50 from every player for opening night seats
 	 */
 	public void grandOperaNight() {
+		if(numberOfPlayers == 2)	{
+			player.balance += 50;
+		}
+		if(numberOfPlayers == 3)	{
+			player.balance +=100;
+		}
+		if(numberOfPlayers == 4)	{
+			player.balance +=150;
+		}
+		if(numberOfPlayers == 5)	{
+			player.balance +=200;
+		}
+		if(numberOfPlayers == 6)	{
+			player.balance +=250;
+		}
+		if(numberOfPlayers == 8)	{
+			player.balance +=300;
+		}
 		showOutput();
 	}
 	
