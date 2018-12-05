@@ -12,9 +12,6 @@ public class GameBoard {
 	public boolean gameOver = false;
 	public BoardSpace boardSpace;
 	public Player player;
-
-	Die die1 = new Die();
-	Die die2 = new Die();
 	
 	/**
 	 * Prompts the players for total # of player, their name, and token - calls the play() method
@@ -112,7 +109,7 @@ public class GameBoard {
 		System.out.println(dice + dice2);
 		
 		if(dice == dice2)	{
-			System.out.println("oof. You rolled another double. Go to Jail scrub");
+			System.out.println("oof. You rolled a third double. Go to Jail scrub");
 			boardSpace.goToJail();
 		}
 		else	{
