@@ -81,6 +81,7 @@ public class GameBoard {
 		
 		if(dice == dice2)	{
 			System.out.println("Doubles! Roll again.");
+			//move player forward by number of dice
 			rolledDoubleTwice();
 		}
 		else	{
@@ -96,6 +97,7 @@ public class GameBoard {
 		
 		if(dice == dice2)	{
 			System.out.println("Another Double! Roll again!");
+			//move player forward by number of dice
 			rolledDoubleThird();
 		}
 		else	{
