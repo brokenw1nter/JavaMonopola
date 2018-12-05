@@ -2,16 +2,24 @@ package tim.javid.abner.csc110;
 
 public class BoardSpace {
 	
+	public Player player = new Player();
 	public Player owner;
 	public double amount;
 	
+	/**
+	 * Prints out the player's balance
+	 */
+	private void showOutput() {
+		System.out.println("Your Balance is Now: " + player.balance);
+	}
 	
 	/**
 	 * Game starts here
 	 * When passed, player receives $200 from the bank
 	 */
 	public void go() {
-		
+		player.balance += 200;
+		showOutput();
 	}
 	
 	/**
@@ -25,7 +33,8 @@ public class BoardSpace {
 	 * When landed on, player has to pay the bank $200
 	 */
 	public void incomeTax() {
-		
+		player.balance -= 200;
+		showOutput();
 	}
 	
 	/**
