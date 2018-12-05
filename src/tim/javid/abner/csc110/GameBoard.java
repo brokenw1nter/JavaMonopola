@@ -69,29 +69,56 @@ public class GameBoard {
 		return false;
 	}
 	
+	/**
+	 * rolls the dice and checks for doubles
+	 * the next three methods are for the dice
+	 */
 	private void rollTheDice() {
 		Random rand = new Random();
 		int dice = rand.nextInt(6) + 1;
 		int dice2 = rand.nextInt(6) + 1;
 		System.out.println(dice + dice2);
+		
 		if(dice == dice2)	{
 			System.out.println("Doubles! Roll again.");
-			rollTheDice();
-				if(dice == dice2)	{
-					System.out.println("Another Double! Roll again!");
-					rollTheDice();
-					if(dice == dice2)	{
-						System.out.println("Oof, another double. Go to jail...");
-						boardSpace.goToJail();
-					}
-				}
+			rolledDoubleTwice();
 		}
 		else	{
 			gameOver = false;
 		}
-		
-		
 	}
+	
+	private void rolledDoubleTwice()	{
+		Random rand = new Random();
+		int dice = rand.nextInt(6) + 1;
+		int dice2 = rand.nextInt(6) + 1;
+		System.out.println(dice + dice2);
+		
+		if(dice == dice2)	{
+			System.out.println("Another Double! Roll again!");
+			rolledDoubleThird();
+		}
+		else	{
+			gameOver = false;
+		}
+	}
+	
+	private void rolledDoubleThird()	{
+		Random rand = new Random();
+		int dice = rand.nextInt(6) + 1;
+		int dice2 = rand.nextInt(6) + 1;
+		System.out.println(dice + dice2);
+		
+		if(dice == dice2)	{
+			System.out.println("oof. You rolled another double. Go to Jail scrub");
+			boardSpace.goToJail();
+		}
+		else	{
+			gameOver = false;
+		}
+	}
+	
+	/////////////////////////end of dice methods/////////////////////////
 	
 	private void switchTurn() {
 		turn = (turn>= (players.length - 1) ? 0 : turn + 1);
