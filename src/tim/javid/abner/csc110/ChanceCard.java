@@ -11,11 +11,10 @@ public class ChanceCard {
 	 * Collect $200 from the bank
 	 */
 	public void advanceToGo() {
-		boolean boolCheck = true;
-		if(boolCheck)
+		if(player.playerPosition == AB.spaces[36] || player.playerPosition == AB.spaces[22] ||player.playerPosition == AB.spaces[7])
 		{
+			player.playerPosition = AB.spaces[0];
 			player.balance += 200;
-			//AB.spaces[24] = player.copyOfSpaces;
 		}
 	}
 	
@@ -154,14 +153,22 @@ public class ChanceCard {
 	 * Collect $200 from the bank for passing Go
 	 */
 	public void takeTripToReadingRailroad() {
-		
+		if(player.playerPosition == AB.spaces[36] || player.playerPosition == AB.spaces[22] ||player.playerPosition == AB.spaces[7])
+		{
+			player.playerPosition = AB.spaces[0];
+			player.balance += 200;
+			player.playerPosition = AB.spaces[5];
+		}
 	}
 	
 	/**
 	 * Move forward until you land on Boardwalk
 	 */
 	public void takeWalkOnTheBoardwalk() {
-		
+		if(player.playerPosition == AB.spaces[36] || player.playerPosition == AB.spaces[22] ||player.playerPosition == AB.spaces[7])
+		{
+			player.playerPosition = AB.spaces[39];
+		}
 	}
 	
 	/**
