@@ -6,8 +6,8 @@ public class Player {
 	
 	String name;
 	Token token;
-	int money;
-	int location;
+	int balance;
+	int playerPosition;
 	int numberOfHouses;
 	int numberOfHotels;
 	int jailCards;
@@ -17,8 +17,8 @@ public class Player {
 	public void playerDefault(String playerName, Token piece)	{
 		name = playerName;
 		token = piece;
-		money = startMoney;
-		location = 0;
+		balance = startMoney;
+		playerPosition = 0;
 		numberOfHouses = 0;
 		numberOfHotels = 0;
 		jailCards = 0;
@@ -30,11 +30,11 @@ public class Player {
 	}
 	
 	public int callMoney() {
-		return money;
+		return balance;
 	}
 	
 	public int callLocation()	{
-		return location;
+		return playerPosition;
 	}
 	
 	public int callNumberOfHouses() {
@@ -50,7 +50,7 @@ public class Player {
 	}
 	
 	public String playerInfo()	{
-		return "Player: " + name + ", Money: " + money + " Location: " + location;
+		return "Player: " + name + ", Money: " + balance + " Location: " + playerPosition;
 	}
 	
 	
