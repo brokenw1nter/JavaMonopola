@@ -25,6 +25,8 @@ public class GameBoard {
 		players = new Player[numberOfPlayers];
 		
 		for (int i = 0; i < players.length; i++) {
+			Player player = new Player();
+			players[i] = player;
 			String playerName = ConsoleUI.promptForInput("Enter Player " + (i + 1) + "'s Name:", false);
 			
 			int token = rand.nextInt(7) + 1;
@@ -49,9 +51,6 @@ public class GameBoard {
 				players[i].init(playerName, Piece.Token.Default);
 			}
 			
-			Player player = new Player();
-			player.name = playerName;
-			players[i] = player;
 			this.turn = 0;
 		}
 		
