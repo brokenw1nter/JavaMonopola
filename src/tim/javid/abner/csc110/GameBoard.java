@@ -2,8 +2,6 @@ package tim.javid.abner.csc110;
 
 import java.io.IOException;
 import java.util.Random;
-
-import edu.neumont.csc110.Player.PieceNames;
 import interfaces.ConsoleUI;
 
 public class GameBoard {
@@ -32,23 +30,23 @@ public class GameBoard {
 			int token = rand.nextInt(7) + 1;
 			switch (token) {
 			case 1:
-				players[i].init(playerName, Piece.Token.Top_Hat);
+				players[i].playerDefault(playerName, Piece.Token.Top_Hat);
 			case 2:
-				players[i].init(playerName, Piece.Token.Battleship);
+				players[i].playerDefault(playerName, Piece.Token.Battleship);
 			case 3:
-				players[i].init(playerName, Piece.Token.Racecar);
+				players[i].playerDefault(playerName, Piece.Token.Racecar);
 			case 4:
-				players[i].init(playerName, Piece.Token.Scottie_Dog);
+				players[i].playerDefault(playerName, Piece.Token.Scottie_Dog);
 			case 5:
-				players[i].init(playerName, Piece.Token.Cat);
+				players[i].playerDefault(playerName, Piece.Token.Cat);
 			case 6:
-				players[i].init(playerName, Piece.Token.T_Rex);
+				players[i].playerDefault(playerName, Piece.Token.T_Rex);
 			case 7:
-				players[i].init(playerName, Piece.Token.Rubber_Ducky);
+				players[i].playerDefault(playerName, Piece.Token.Rubber_Ducky);
 			case 8:
-				players[i].init(playerName, Piece.Token.Penguin);
+				players[i].playerDefault(playerName, Piece.Token.Penguin);
 			default:
-				players[i].init(playerName, Piece.Token.Default);
+				players[i].playerDefault(playerName, Piece.Token.Default);
 			}
 			
 			this.turn = 0;
@@ -68,7 +66,7 @@ public class GameBoard {
 		
 		while(!gameOver) {
 			System.out.println("It is " + players[turn].name + "'s turn.");
-			System.out.println(players[turn].name + ", your balance is " + players[turn].balance);
+			System.out.println(players[turn].name + ", your balance is " + players[turn].money);
 			int selection = ConsoleUI.promptForMenuSelection(options, false);
 			
 			switch (selection) {
