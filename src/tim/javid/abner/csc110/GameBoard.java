@@ -3,6 +3,7 @@ package tim.javid.abner.csc110;
 import java.io.IOException;
 import java.util.Random;
 
+import edu.neumont.csc110.Player.PieceNames;
 import interfaces.ConsoleUI;
 
 public class GameBoard {
@@ -12,6 +13,7 @@ public class GameBoard {
 	public boolean gameOver = false;
 	public BoardSpace boardSpace;
 	public Player player;
+	public Random rand = new Random();
 	
 	/**
 	 * Prompts the players for total # of player, their name, and token - calls the play() method
@@ -24,8 +26,29 @@ public class GameBoard {
 		
 		for (int i = 0; i < players.length; i++) {
 			String playerName = ConsoleUI.promptForInput("Enter Player " + (i + 1) + "'s Name:", false);
-			System.out.println("Tokens: Top Hat, Battleship, Racecar, Scottie Dog, T-Rex, Rubber Ducky, Penguin");
-			String playerToken = ConsoleUI.promptForInput("Choose a Token for Player " + (i + 1) + ":", false);
+			
+			int token = rand.nextInt(7) + 1;
+			switch (token) {
+			case 1:
+				players[i].init(playerName, Piece.Token.Top_Hat);
+			case 2:
+				players[i].init(playerName, Piece.Token.Battleship);
+			case 3:
+				players[i].init(playerName, Piece.Token.Racecar);
+			case 4:
+				players[i].init(playerName, Piece.Token.Scottie_Dog);
+			case 5:
+				players[i].init(playerName, Piece.Token.Cat);
+			case 6:
+				players[i].init(playerName, Piece.Token.T_Rex);
+			case 7:
+				players[i].init(playerName, Piece.Token.Rubber_Ducky);
+			case 8:
+				players[i].init(playerName, Piece.Token.Penguin);
+			default:
+				players[i].init(playerName, Piece.Token.Default);
+			}
+			
 			Player player = new Player();
 			player.name = playerName;
 			players[i] = player;
@@ -50,11 +73,11 @@ public class GameBoard {
 			int selection = ConsoleUI.promptForMenuSelection(options, false);
 			
 			switch (selection) {
-			case 0:
+			case 1:
 				rollTheDice();
 				switchTurn();
 				break;
-			case 1:
+			case 2:
                 System.out.println("Thank You for Playing JavaMonopola!");
                 gameOver = true;
                 break;
@@ -71,7 +94,6 @@ public class GameBoard {
 	 * the next three methods are for the dice
 	 */
 	private void rollTheDice() {
-		Random rand = new Random();
 		int dice = rand.nextInt(6) + 1;
 		int dice2 = rand.nextInt(6) + 1;
 		System.out.println(dice + dice2);
@@ -124,8 +146,8 @@ public class GameBoard {
 	}
 	
 	private void populateString(String[] options)	{
-		options[1] = "Roll the Dice";
-		options[2] = "Quit";
+		options[0] = "Roll the Dice";
+		options[1] = "Quit";
 	}
 	
 }
