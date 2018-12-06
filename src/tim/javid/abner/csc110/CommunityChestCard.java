@@ -65,24 +65,28 @@ public class CommunityChestCard {
 	/**
 	 * Collect $50 from every player for opening night seats
 	 */
+	@SuppressWarnings("unlikely-arg-type")
 	public void grandOperaNight() {
-		if(numberOfPlayers == 2)	{
+		if(numberOfPlayers.equals(2))	{
 			player.balance += 50;
 		}
-		if(numberOfPlayers == 3)	{
-			player.balance +=100;
+		if(numberOfPlayers.equals(3))	{
+			player.balance += 100;
 		}
-		if(numberOfPlayers == 4)	{
-			player.balance +=150;
+		if(numberOfPlayers.equals(4))	{
+			player.balance += 150;
 		}
-		if(numberOfPlayers == 5)	{
-			player.balance +=200;
+		if(numberOfPlayers.equals(5))	{
+			player.balance += 200;
 		}
-		if(numberOfPlayers == 6)	{
-			player.balance +=250;
+		if(numberOfPlayers.equals(6))	{
+			player.balance += 250;
 		}
-		if(numberOfPlayers == 8)	{
-			player.balance +=300;
+		if(numberOfPlayers.equals(7))	{
+			player.balance += 300;
+		}
+		if(numberOfPlayers.equals(8))	{
+			player.balance += 350;
 		}
 		showOutput();
 	}
