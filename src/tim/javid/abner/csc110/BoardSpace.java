@@ -5,6 +5,11 @@ public class BoardSpace {
 	public Player player = new Player();
 	public Player owner;
 	public double amount;
+	public int spaceInt;
+	
+	public BoardSpace(int spaceNum) {
+		spaceInt = spaceNum;
+	}
 	
 	/**
 	 * Prints out the player's balance

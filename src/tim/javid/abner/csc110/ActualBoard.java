@@ -6,7 +6,6 @@ public class ActualBoard {
 	 * initialize new array
 	 */
 	public BoardSpace[] spaces = new BoardSpace[41];
-	
 	public BoardSpace playerPosition;
 	
 	/**
@@ -14,30 +13,30 @@ public class ActualBoard {
 	 * @param spaces (array name)
 	 * @return spaces (the array)
 	 */
-	public int[] placeLandOn(int[] spaces) {
-		spaces[0] = BoardSpace.go();
+	public void placeLandOn() {
+		spaces[0] = new BoardSpace(0); // Go
 		spaces[1] = "Mediter-Ranean Avenue";
-		spaces[2] = "Community Chest";
+		spaces[2] = new BoardSpace(1); // "Community Chest";
 		spaces[3] = "Baltic Avenue";
-		spaces[4] = "Income Tax";
+		spaces[4] = new BoardSpace(6); // "Income Tax";
 		spaces[5] = "Reading Railroad";
 		spaces[6] = "Oriental Avenue";
-		spaces[7] = "Chance";
+		spaces[7] = new BoardSpace(2); // "Chance";
 		spaces[8] = "Vermont Avenue";
 		spaces[9] = "Connecticut Avenue";
-		spaces[10] = "Just visiting";
+		spaces[10] = new BoardSpace(3); // "Just visiting";
 		spaces[11] = "St. Charles Place";
 		spaces[12] = "Electric Company";
 		spaces[13] = "States Avenue";
 		spaces[14] = "Virginia Avenue";
 		spaces[15] = "Pennsylvania Railroad";
 		spaces[16] = "St. James Place";
-		spaces[17] = "Community Chest";
+		spaces[17] = new BoardSpace(1); // "Community Chest";
 		spaces[18] = "Tennessee Avenue";
 		spaces[19] = "New York Avenue";
-		spaces[20] = "Free Parkng";
+		spaces[20] = new BoardSpace(4); // "Free Parkng";
 		spaces[21] = "Kentucky Avenue";
-		spaces[22] = "Chance";
+		spaces[22] = new BoardSpace(2); // "Chance";
 		spaces[23] = "Indiana Avenue";
 		spaces[24] = "Illinois Avenue";
 		spaces[25] = "B. & O. Railroad";
@@ -45,18 +44,58 @@ public class ActualBoard {
 		spaces[27] = "Ventnor Avenue";
 		spaces[28] = "Water Works";
 		spaces[29] = "Marvin Gardens";
-		spaces[30] = "Go To Jail";
+		spaces[30] = new BoardSpace(5); // "Go To Jail";
 		spaces[31] = "Pacific Avenue";
 		spaces[32] = "North Carolina Avenue";
-		spaces[33] = "Community Chest";
+		spaces[33] = new BoardSpace(1); // "Community Chest";
 		spaces[34] = "Pennsylvania Avenue";
 		spaces[35] = "Short Line";
-		spaces[36] = "Chance";
+		spaces[36] = new BoardSpace(2); // "Chance";
 		spaces[37] = "Park Place";
-		spaces[38] = "Luxury Tax";
+		spaces[38] = new BoardSpace(7); // "Luxury Tax";
 		spaces[39] = "Boardwalk";
 		spaces[40] = "Actual Jail";
-		return spaces;
+		
+//		spaces[1] = "Mediter-Ranean Avenue";
+//		spaces[2] = "Community Chest";
+//		spaces[3] = "Baltic Avenue";
+//		spaces[4] = "Income Tax";
+//		spaces[5] = "Reading Railroad";
+//		spaces[6] = "Oriental Avenue";
+//		spaces[7] = "Chance";
+//		spaces[8] = "Vermont Avenue";
+//		spaces[9] = "Connecticut Avenue";
+//		spaces[10] = "Just visiting";
+//		spaces[11] = "St. Charles Place";
+//		spaces[12] = "Electric Company";
+//		spaces[13] = "States Avenue";
+//		spaces[14] = "Virginia Avenue";
+//		spaces[15] = "Pennsylvania Railroad";
+//		spaces[16] = "St. James Place";
+//		spaces[17] = "Community Chest";
+//		spaces[18] = "Tennessee Avenue";
+//		spaces[19] = "New York Avenue";
+//		spaces[20] = "Free Parkng";
+//		spaces[21] = "Kentucky Avenue";
+//		spaces[22] = "Chance";
+//		spaces[23] = "Indiana Avenue";
+//		spaces[24] = "Illinois Avenue";
+//		spaces[25] = "B. & O. Railroad";
+//		spaces[26] = "Atlntic Avenue";
+//		spaces[27] = "Ventnor Avenue";
+//		spaces[28] = "Water Works";
+//		spaces[29] = "Marvin Gardens";
+//		spaces[30] = "Go To Jail";
+//		spaces[31] = "Pacific Avenue";
+//		spaces[32] = "North Carolina Avenue";
+//		spaces[33] = "Community Chest";
+//		spaces[34] = "Pennsylvania Avenue";
+//		spaces[35] = "Short Line";
+//		spaces[36] = "Chance";
+//		spaces[37] = "Park Place";
+//		spaces[38] = "Luxury Tax";
+//		spaces[39] = "Boardwalk";
+//		spaces[40] = "Actual Jail";
 	}
 	
 	public void playerIsOn() {
