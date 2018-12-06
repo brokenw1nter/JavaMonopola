@@ -3,16 +3,16 @@ package tim.javid.abner.csc110;
 import tim.javid.abner.csc110.Piece.Token;
 
 public class Player {
-
-	final int startMoney = 1500;
+	
 	String name;
 	Token token;
-	int money = 0;
-	int location = 0;
-	int numberOfHouses = 0;
-	int numberOfHotels = 0;
-	int jailCards = 0;
-	boolean jailed = false;
+	int money;
+	int location;
+	int numberOfHouses;
+	int numberOfHotels;
+	int jailCards;
+	boolean jailed;
+	final int startMoney = 1500;
 	
 	public void playerDefault(String playerName, Token piece)	{
 		name = playerName;
