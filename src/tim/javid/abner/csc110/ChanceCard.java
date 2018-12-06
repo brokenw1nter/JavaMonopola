@@ -15,7 +15,7 @@ public class ChanceCard {
 		if(boolCheck)
 		{
 			player.balance += 200;
-			
+			//AB.spaces[24] = player.copyOfSpaces;
 		}
 	}
 	
@@ -24,7 +24,16 @@ public class ChanceCard {
 	 * If you pass Go, collect $200 from the bank
 	 */
 	public void advanceToIllinoisAve() {
-		
+		if(player.playerPosition == AB.spaces[36])
+		{
+			player.playerPosition = AB.spaces[0];
+			player.balance += 200;
+			player.playerPosition= AB.spaces[24];
+		}
+		else
+		{
+			player.playerPosition = AB.spaces[24];
+		}
 	}
 	
 	/**
@@ -32,7 +41,16 @@ public class ChanceCard {
 	 * If you pass Go, collect $200 from the bank
 	 */
 	public void advanceToStCharlesPlace() {
-		
+		if(player.playerPosition == AB.spaces[36] || player.playerPosition == AB.spaces[22])
+		{
+			player.playerPosition = AB.spaces[0];
+			player.balance += 200;
+			player.playerPosition= AB.spaces[11];
+		}
+		else
+		{
+			player.playerPosition = AB.spaces[11];
+		}
 	}
 	
 	/**
@@ -41,7 +59,16 @@ public class ChanceCard {
 	 * If owned, throw the dice and pay the owner a total of 10 times the amount thrown
 	 */
 	public void advanceToNearestUtility() {
-		
+		if(player.playerPosition == AB.spaces[36] || player.playerPosition == AB.spaces[22])
+		{
+			player.playerPosition = AB.spaces[0];
+			player.balance += 200;
+			player.playerPosition= AB.spaces[11];
+		}
+		else
+		{
+			player.playerPosition = AB.spaces[11];
+		}
 	}
 	
 	/**
@@ -50,14 +77,27 @@ public class ChanceCard {
 	 * If owned, pay the owner a total of twice the amount of rental
 	 */
 	public void advanceToNearestRailroad() {
-		
+		if(player.playerPosition == AB.spaces[36] || player.playerPosition == AB.spaces[7])
+		{
+			if(player.playerPosition == AB.spaces[36])
+			{
+				player.playerPosition = AB.spaces[0];
+				player.balance += 200;
+				
+			}
+			player.playerPosition= AB.spaces[12];
+		}
+		else
+		{
+			player.playerPosition = AB.spaces[28];
+		}
 	}
 	
 	/**
 	 * The bank pays you a dividend of $50
 	 */
 	public void bankPaysYouDividend() {
-		
+		player.balance += 50;
 	}
 	
 	/**
@@ -72,7 +112,18 @@ public class ChanceCard {
 	 * Move back 3 spaces
 	 */
 	public void goBackThreeSpaces() {
-		
+		if(player.playerPosition == AB.spaces[36])
+		{
+			player.playerPosition = AB.spaces[33];
+		}
+		if(player.playerPosition == AB.spaces[7] )
+		{
+			player.playerPosition = AB.spaces[4];
+		}
+		if(player.playerPosition == AB.spaces[22])
+		{
+			player.playerPosition = AB.spaces[19];
+		}	
 	}
 	
 	/**
@@ -80,7 +131,7 @@ public class ChanceCard {
 	 * You do not pass Go or collect $200 from the bank
 	 */
 	public void goToJail() {
-		
+		player.playerPosition = AB.spaces
 	}
 	
 	/**
