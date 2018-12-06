@@ -13,6 +13,7 @@ public class Player {
 	int jailCards;
 	boolean jailed;
 	final int startMoney = 1500;
+	public int[] copyOfSpaces;
 	
 	public void playerDefault(String playerName, Token piece)	{
 		name = playerName;
