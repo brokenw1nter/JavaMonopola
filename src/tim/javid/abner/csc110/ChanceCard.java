@@ -131,7 +131,7 @@ public class ChanceCard {
 	 * You do not pass Go or collect $200 from the bank
 	 */
 	public void goToJail() {
-		player.playerPosition = AB.spaces
+		player.playerPosition = AB.spaces[40];
 	}
 	
 	/**
