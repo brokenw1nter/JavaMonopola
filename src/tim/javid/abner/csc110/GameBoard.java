@@ -66,7 +66,7 @@ public class GameBoard {
 		
 		while(!gameOver) {
 			System.out.println("It is " + players[turn].name + "'s turn.");
-			System.out.println(players[turn].name + ", your balance is " + players[turn].money);
+			System.out.println(players[turn].name + ", your balance is " + players[turn].balance);
 			int selection = ConsoleUI.promptForMenuSelection(options, false);
 			
 			switch (selection) {
